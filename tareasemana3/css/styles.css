@@ -115,7 +115,7 @@ p {
 }
 /* Bienvenida */
 #welcome {
-  background: url('/imagenes/bg.jpg') no-repeat center center/cover;
+  background: url('imagenes/bg.jpg') no-repeat center center/cover;
   height: 600px;
 }
 #welcome1 {
