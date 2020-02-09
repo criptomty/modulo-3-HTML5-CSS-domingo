@@ -203,12 +203,12 @@ p {
 /* Testimonos */
 #testimonials {
   height: 600px;
-  background: url('/imagenes/bg.jpg') no-repeat center center/cover;
+  background: url('imagenes/bg.jpg') no-repeat center center/cover;
   padding-top: 100px;
 }
 #practica {
   height: auto;
-  background: url('/imagenes/bg.jpg') no-repeat center center/cover;
+  background: url('imagenes/bg.jpg') no-repeat center center/cover;
   padding-top: 100px;
 }
 #testimonials h2 {
