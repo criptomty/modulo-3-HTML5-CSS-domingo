@@ -18,7 +18,8 @@ h1, h2, h3 {
   color : #FF6600;
 }
 p {
-  margin: 10px 0;
+  margin: 10px 0
+color: black;
 }
 /* Clases General */
 /* container mantendrá el contenido centrado y con un máximo de ancho */
