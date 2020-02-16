@@ -45,7 +45,7 @@ p {
   background: #980000 ;
   padding: 13px 20px;
   border: none;
-  cursor: pointer;
+  cursor: pointer;n
 }
 .btn:hover {
   background: #5BBF21;
@@ -55,7 +55,7 @@ p {
   color: #215b33;
 }
 .bg-dark {
-  background: #990000;
+  background: #006600;
   color: #fff;
 }
 .bg-light {
