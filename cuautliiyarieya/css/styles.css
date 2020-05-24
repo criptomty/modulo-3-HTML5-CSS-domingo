@@ -177,7 +177,7 @@ color: black;
 /* Información Secundaria */
 .box {
   float: left;
-  width: 50%;
+  width: 33.33333%;
   padding: 50px;
   text-align: center;
 }
