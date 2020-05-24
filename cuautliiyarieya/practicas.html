@@ -28,6 +28,30 @@
     </nav>
 
   </header>
+  <div>
+  <script language="JavaScript">
+ //Ejemplo que muestra una galeria de Imagenes
+    function ver_imagen(){
+      if(!document.images)
+      return
+      document.images.img.src= './imagenes';
+      document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value]
+    }
+    </script>
+  
+        <h2>Selecciona una imagen</h2>
+      <form name="imagenes">
+        <select name="imagen" size="1" onchange="ver_imagen()">
+          <option>Elije imagen</option>
+          <option value="./imagenes/imagen1.jpg">1</option>
+          <option value='./imagenes"/imagen2.jpg'>2</option>
+          <option value="./imagenes/manutd.jpg">3</option>
+          </select>
+          </form>
+          <img src="./imagenes/imagen1.jpg" name="img" width=600 height=436 border=3>
+  
+  </div>
+  
   <section id="practica" class="py-3">
     <section id="features">
   
