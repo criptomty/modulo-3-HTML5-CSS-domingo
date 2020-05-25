@@ -38,7 +38,7 @@
       return
       document.images.img.src= "./imagenes";
       document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value]
-      var idImg = "./imagenes/gpo" + 4 + ".jpg";
+      var idImg = "./imagenes/gpo" + document.imagenes.imagen.selectedIndex.value + ".jpg";
       alert(idImg);
       document.images.img.src= idImg;
       
