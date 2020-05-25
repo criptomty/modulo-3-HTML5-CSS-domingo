@@ -38,9 +38,13 @@
       return
       document.images.img.src= "./imagenes";
       document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value];
+      
+      var x = document.getElementById("imagen").selectedIndex;
+      var y = document.getElementById("imagen").options;
+      
       var idImg = "./imagenes/gpo" + document.imagenes.imagen.selectedIndex.value + ".jpg";
       alert(idImg);
-      alert(document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value]);
+      alert(y[x].index);
       document.images.img.src= idImg;
       
     }
@@ -48,7 +52,7 @@
   
         <h2>Selecciona una imagen</h2>
       <form name="imagenes">
-        <select name="imagen" size="1" onchange="ver_imagen()">
+        <select id="imagen" name="imagen" size="1" onchange="ver_imagen()">
           <option>Elije imagen</option>
           <option value=".1">1</option>
           <option value="./imagenes/gpo3.jpg">3</option>
