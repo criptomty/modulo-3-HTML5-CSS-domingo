@@ -38,7 +38,7 @@
       return
       document.images.img.src= "./imagenes";
       document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value]
-      var idImg = "./imagenes/gpo" + toString(document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex.value])
+      var idImg = "./imagenes/gpo" + toString(document.imagenes.imagen.selectedIndex.value)
             + ".jpg";
       alert(idImg);
       //document.images.img.src= idImg;
@@ -50,7 +50,7 @@
       <form name="imagenes">
         <select name="imagen" size="1" onchange="ver_imagen()">
           <option>Elije imagen</option>
-          <option value="./imagenes/gpo1.jpg">1</option>
+          <option value=".1">1</option>
           <option value="./imagenes/gpo3.jpg">3</option>
           <option value="./imagenes/gpo4.jpg">4</option>
           <option value="./imagenes/gpo5.jpg">5</option>
