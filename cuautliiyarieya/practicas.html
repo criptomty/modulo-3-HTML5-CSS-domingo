@@ -41,11 +41,8 @@
       
       var x = document.getElementById("imagen").selectedIndex;
       var y = document.getElementById("imagen").options;
-      
-      var idImg = "./imagenes/gpo" + document.imagenes.imagen.selectedIndex.value + ".jpg";
-      alert(y[x]);
-    
-      document.images.img.src= idImg;
+      alert(y[x].text);
+      document.images.img.src= y[x].text;
       
     }
     </script>
