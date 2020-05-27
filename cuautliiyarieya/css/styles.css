@@ -12,7 +12,20 @@ html, body {
 a {
   color: #333;
   text-decoration: none;
+	
 }
+
+a:hover {
+  
+  color:#100;
+}
+
+a:visited {
+
+  color:#white;
+}
+
+
 h1, h2, h3 {
   padding-bottom: 20px;
   color : #FF6600;
