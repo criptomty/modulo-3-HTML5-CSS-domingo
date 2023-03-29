@@ -97,5 +97,55 @@ El General Natividad Reyna era de San Francisco del Rincón, Guanajuato y ademá
    <div class="clr"></div>
   <footer id="main-footer">
     <p>Cuauhtli Iyarieya &copy; 2020, Todos los derechos Reservados</p>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <h1>ChatGPT</h1>
+	<div id="chat-container">
+		<div id="chat-log">
+			<!-- Aquí se mostrarán los mensajes del chat -->
+		</div>
+		<input type="text" id="user-input" placeholder="Escribe un mensaje...">
+		<button id="send-btn">Enviar</button>
+	</div>
+	
+	<script>
+		const chatLog = document.getElementById('chat-log');
+		const userInput = document.getElementById('user-input');
+		const sendBtn = document.getElementById('send-btn');
+		
+		const apiUrl = 'https://api.openai.com/v1/engine/Davinci-2/completions';
+		const apiKey = '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';
+		
+		sendBtn.addEventListener('click', () => {
+			const userInputValue = userInput.value.trim();
+			if (!userInputValue) {
+				return;
+			}
+			
+			// Enviar la entrada de usuario a la API de OpenAI
+			axios.post(apiUrl, {
+				prompt: userInputValue,
+				max_tokens: 50
+			}, {
+				headers: {
+					'Content-Type': 'application/json',
+					'Authorization': `Bearer ${apiKey}`
+				}
+			})
+			.then(response => {
+				// Mostrar la respuesta del modelo en el chat
+				const chatMessage = response.data.choices[0].text;
+				chatLog.innerHTML += `<p><strong>Usuario:</strong> ${userInputValue}</p>`;
+				chatLog.innerHTML += `<p><strong>ChatGPT:</strong> ${chatMessage}</p>`;
+				userInput.value = '';
+			})
+			.catch(error => {
+				console.error(error);
+			});
+		});
+	</script>
+
+  
   </footer>
+  
+  
 </html>
