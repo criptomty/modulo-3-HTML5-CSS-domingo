@@ -107,42 +107,7 @@ El General Natividad Reyna era de San Francisco del Rincón, Guanajuato y ademá
 		<button id="send-btn">Enviar</button>
 	</div>
 	
-	<script>
-		const chatLog = document.getElementById('chat-log');
-		const userInput = document.getElementById('user-input');
-		const sendBtn = document.getElementById('send-btn');
-		
-		const apiUrl = 'https://api.openai.com/v1/engine/Davinci-2/completions';
-		const apiKey = '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';
-		
-		sendBtn.addEventListener('click', () => {
-			const userInputValue = userInput.value.trim();
-			if (!userInputValue) {
-				return;
-			}
-			
-			// Enviar la entrada de usuario a la API de OpenAI
-			axios.post(apiUrl, {
-				prompt: userInputValue,
-				max_tokens: 50
-			}, {
-				headers: {
-					'Content-Type': 'application/json',
-					'Authorization': `Bearer ${apiKey}`
-				}
-			})
-			.then(response => {
-				// Mostrar la respuesta del modelo en el chat
-				const chatMessage = response.data.choices[0].text;
-				chatLog.innerHTML += `<p><strong>Usuario:</strong> ${userInputValue}</p>`;
-				chatLog.innerHTML += `<p><strong>ChatGPT:</strong> ${chatMessage}</p>`;
-				userInput.value = '';
-			})
-			.catch(error => {
-				console.error(error);
-			});
-		});
-	</script>
+	
 
   
   </footer>
